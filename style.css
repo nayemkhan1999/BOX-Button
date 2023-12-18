@@ -1,0 +1,40 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+button {
+  padding: 14px 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: verdana;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: #34e7e4;
+  color: #3d3d3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #34e7e4;
+  border-radius: 20px;
+  z-index: -999;
+  transition: 0.2s ease;
+}
+
+button:hover::before {
+  transform: scale(1.4);
+  opacity: 0;
+}
